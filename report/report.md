@@ -5,15 +5,22 @@ date: 21st April 2019
 output: pdf_document
 ---
 
-## INM432 Coursework
+## INM432 Big Data Coursework Part 2
 
 https://github.com/tpgmartin/inm432_cw2
 
 ## Abstract
 
-## Initial Investigation of Coastline Dataset
+## Task 1 - Running with Larger Dataset
 
-## Modifying Server & Cluster Configurations
+Reasons for difference?
+
+| Dataset    | Training Set Accuracy | Test Set Accuracy |
+| ---------- | --------------------- | ----------------- |
+| Flowers    | 100%                  | 91.3%             |
+| Coastlines | 83.3%                 | 71.3%             |
+
+## Task 2 - Modifying Server & Cluster Configurations
 
 ## Dropout
 
