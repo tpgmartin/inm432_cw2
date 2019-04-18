@@ -28,7 +28,19 @@ Need to set `config.yaml` file as per https://cloud.google.com/ml-engine/docs/te
 
 Run training task with `--config` option
 
+| Dataset    | Training Set Accuracy | Test Set Accuracy |
+| ---------- | --------------------- | ----------------- |
+| Flowers    |                       |                   |
+| Coastlines | 84.3%                 | 72.3%             |
+
 ## Task 3 - Dropout
+
+Update config file with line `args: —dropout 0.5`
+
+| Dataset    | Training Set Accuracy | Test Set Accuracy |
+| ---------- | --------------------- | ----------------- |
+| Flowers    |                       |                   |
+| Coastlines | 84%                   | 70.3%             |
 
 ## Task 4 - Data Augmentation
 
