@@ -22,9 +22,15 @@ Reasons for difference?
 
 ## Task 2 - Modifying Server & Cluster Configurations
 
-## Dropout
+Include `tensorflow-gpu` as REQUIRED_PACKAGES in `setup.py` (replace `tensorflow`)
 
-## Data Augmentation
+Need to set `config.yaml` file as per https://cloud.google.com/ml-engine/docs/tensorflow/using-gpus
+
+Run training task with `--config` option
+
+## Task 3 - Dropout
+
+## Task 4 - Data Augmentation
 
 ## Conclusion
 
