@@ -11,14 +11,40 @@ https://github.com/tpgmartin/inm432_cw2
 
 ## Abstract
 
+Metrics
+
+* Accuracy
+* Loss
+* Time to train
+
 ## Task 1 - Running with Larger Dataset
 
 Reasons for difference?
 
+Number of samples:
+
+* Flowers 3,670
+* Coastlines 10,533
+
+Number of classes
+
+* Flowers 5
+* Coastlines 18
+
 | Dataset    | Training Set Accuracy | Test Set Accuracy |
 | ---------- | --------------------- | ----------------- |
-| Flowers    | 100%                  | 91.3%             |
-| Coastlines | 83.3%                 | 71.3%             |
+| Flowers    | -----                 | -----             |
+| Coastlines | 84.7%                 | 72.7%             |
+
+| Dataset    | Training Set Loss     | Test Set Loss     |
+| ---------- | --------------------- | ----------------- |
+| Flowers    | -----                 | -----             |
+| Coastlines | 0.559                 | 0.844             |
+
+| Dataset    | Training Set Time     | Test Set Time     |
+| ---------- | --------------------- | ----------------- |
+| Flowers    | -----                 | -----             |
+| Coastlines | 3m 54s                | 3 m 51s           |
 
 ## Task 2 - Modifying Server & Cluster Configurations
 
