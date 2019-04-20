@@ -17,6 +17,11 @@ Metrics
 * Loss
 * Time to train
 
+
+## Overview
+
+* Discuss model used - see notes
+
 ## Task 1 - Running with Larger Dataset
 
 Reasons for difference?
@@ -33,18 +38,18 @@ Number of classes
 
 | Dataset    | Training Set Accuracy | Test Set Accuracy |
 | ---------- | --------------------- | ----------------- |
-| Flowers    | -----                 | -----             |
-| Coastlines | 84.7%                 | 72.7%             |
+| Flowers    | 100%                  | 92.33%            |
+| Coastlines | 84.67%                | 72.67%            |
 
 | Dataset    | Training Set Loss     | Test Set Loss     |
 | ---------- | --------------------- | ----------------- |
-| Flowers    | -----                 | -----             |
-| Coastlines | 0.559                 | 0.844             |
+| Flowers    | 0.0054                | 0.33              |
+| Coastlines | 0.5588                | 0.8442            |
 
 | Dataset    | Training Set Time     | Test Set Time     |
 | ---------- | --------------------- | ----------------- |
-| Flowers    | -----                 | -----             |
-| Coastlines | 3m 54s                | 3 m 51s           |
+| Flowers    | 17m 13s               | 17m 10s           |
+| Coastlines | 3m 54s                | 3m 51s            |
 
 ## Task 2 - Modifying Server & Cluster Configurations
 
@@ -56,8 +61,18 @@ Run training task with `--config` option
 
 | Dataset    | Training Set Accuracy | Test Set Accuracy |
 | ---------- | --------------------- | ----------------- |
-| Flowers    |                       |                   |
-| Coastlines | 84.3%                 | 72.3%             |
+| Flowers    | 100%                  | 91.33%            |
+| Coastlines | 79.33%                | 71.0%             |
+
+| Dataset    | Training Set Loss     | Test Set Loss     |
+| ---------- | --------------------- | ----------------- |
+| Flowers    | 0.0056                | 0.3546            |
+| Coastlines | 0.7011                | 0.902             |
+
+| Dataset    | Training Set Time     | Test Set Time     |
+| ---------- | --------------------- | ----------------- |
+| Flowers    | 3m 48s                | 3m 45s            |
+| Coastlines | 2m 52s                | 3m 25s            |
 
 ## Task 3 - Dropout
 
@@ -65,10 +80,18 @@ Update config file with line `args: —dropout 0.5`
 
 | Dataset    | Training Set Accuracy | Test Set Accuracy |
 | ---------- | --------------------- | ----------------- |
-| Flowers    |                       |                   |
-| Coastlines | 84%                   | 70.3%             |
+| Flowers    | 100%                  | 90.67%            |
+| Coastlines | 81.33%                | 71.67%            |
 
-## Task 4 - Data Augmentation
+| Dataset    | Training Set Loss     | Test Set Loss     |
+| ---------- | --------------------- | ----------------- |
+| Flowers    | 0.0097                | 0.3623            |
+| Coastlines | 0.6233                | 0.8708            |
+
+| Dataset    | Training Set Time     | Test Set Time     |
+| ---------- | --------------------- | ----------------- |
+| Flowers    | 4m 1s                 | 3m 57s            |
+| Coastlines | 3m 44s                | 3m 40s            |
 
 ## Conclusion
 
