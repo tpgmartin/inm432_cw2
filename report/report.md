@@ -16,7 +16,7 @@ This short coursework is designed as an exercise to learn how to use the Google 
 
 * Running the provided source code using CloudML
 * Modifying the original source code to run with a custom GPU configuration
-* Exploring the effect of dropout to training
+* Exploring the effect of dropout on training performance
 
 The data examined in this coursework are from a [flowers](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/master/flowers) and [coastlines](https://codelabs.developers.google.com/codelabs/scd-coastline/index.html?index=..%2F..cloud-quest-scientific-data#0) dataset. Both datasets contain image files with classes. However, the number of rows is much larger in the coastlines dataset compared to the flowers dataset: 10,533 individual rows to 3,670 respectively. The number of classes also differs between the two datasets: The coastlines dataset contains 18 classes, compared to 5 in the flowers dataset.
 
@@ -55,13 +55,13 @@ In the repo `inm432_cw2`, the script run for each dataset can be found at `./coa
 | Flowers    | 17m 13s               | 17m 10s           |
 | Coastlines | 3m 54s                | 3m 51s            |
 
-Accuracy and loss are consistently higher for the flowers dataset compared to the coastlines data. This may likely be a consequence of the much larger number of classes in the coastlines dataset compared to the flowers dataset, although it may also suggest that the former dataset is simply more difficult to classify. In either case the model indicates that ... 
+Accuracy and loss are consistently higher for the flowers dataset compared to the coastlines data. This is likely a consequence of the much larger number of classes in the coastlines dataset compared to the flowers dataset, although it may also suggest that the former dataset is simply more difficult to classify due to the image files considered. In either case the model performance indicates that both models could train well without underfitting/overfitting.
 
 It's likely that the compute time for the flowers dataset is erroneous for this specific run as all other runs are around the four minute mark.
 
 ## Task 2 - Modifying Server & Cluster Configurations
 
-For this task a config file was passed as a command line argument to the ml-engine task, following this [guide](https://cloud.google.com/ml-engine/docs/tensorflow/using-gpus). Both datasets use the same config file.
+For this task a config file was passed as a command line argument to the ml-engine task, following this [guide](https://cloud.google.com/ml-engine/docs/tensorflow/using-gpus). Both datasets use the same config file, with multiple workers, most of which are GPUs.
 
 | Dataset    | Training Set Accuracy | Test Set Accuracy |
 | ---------- | --------------------- | ----------------- |
@@ -84,7 +84,7 @@ Why?
 
 ## Task 3 - Dropout
 
-Update config file with line `args: —dropout 0.5`
+For this final task, an additional dropout coefficient was passed to the the previous GPU configuration file, with all other parameters remaining the same.
 
 | Dataset    | Training Set Accuracy | Test Set Accuracy |
 | ---------- | --------------------- | ----------------- |
@@ -103,3 +103,6 @@ Update config file with line `args: —dropout 0.5`
 
 ## Conclusion
 
+This project aimed to investigate the use of the Google Cloud Platform CloudML framework for machine learning tasks for two datasets. The two datasets contained image files and mapped to a classification task. The datasets differed in total number of entries, and more dramatically, in the number of classes.
+
+Augment test set accuracy how?
