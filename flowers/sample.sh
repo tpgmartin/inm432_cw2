@@ -62,6 +62,8 @@ gcloud ml-engine jobs submit training "$JOB_ID" \
   --output_path "${GCS_PATH}/training" \
   --eval_data_paths "${GCS_PATH}/preproc/eval*" \
   --train_data_paths "${GCS_PATH}/preproc/train*"
+  # following is an optional argument to toggle the configuration file
+  # --config config.yaml
 
 # Tell CloudML about a new type of model coming.  Think of a "model" here as
 # a namespace for deployed Tensorflow graphs.

@@ -13,6 +13,7 @@ echo
 echo "Using job id: " $JOB_ID
 set -v -e
 
+# preprocessing should ideally only be run once per dataset - see discussion in report
 python trainer/preprocess.py \
   --input_dict "$DICT_FILE" \
   --input_path "${GCS_PATH}/eval_set.csv" \
@@ -34,9 +35,13 @@ gcloud ml-engine jobs submit training "$JOB_ID" \
   --runtime-version=1.10 \
   -- \
   --output_path "${GCS_PATH}/training" \
+  # the following data paths were hardcoded for subsequent executions to be 
+  # `gs://inm432-cw2-237509-ml/tpgmartin/coastlines_tpgmartin_20190413_212534/preproc/eval*` etc.
   --eval_data_paths "${GCS_PATH}/preproc/eval*" \
   --train_data_paths "${GCS_PATH}/preproc/train*"
   --label_count=18
+  # following is an optional argument to toggle the configuration file
+  # --config config.yaml
 
 gcloud ml-engine models create "$MODEL_NAME" \
   --regions us-central1
